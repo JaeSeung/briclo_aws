@@ -1,0 +1,53 @@
+{% extends 'home/base.html' %}
+{% load staticfiles %}
+
+  {% block content %}
+  <head>
+     <link rel="stylesheet" type="text/css" href="{% static "home/intro.css" %}">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div style="background-color:white;height:40%;">
+        <a href="{% url "home:team_introduce" %}" style="text-decoration:none">
+          <div style="float:left;width:45%;height:80%;margin-left:3%;margin-top:1.5%">
+            <img src="{% static "home/img/closet.jpeg" %}"style="height: 100%; width:100%"/>
+          </div>
+        </a>
+
+        <a href="{% url "product:product_list" %}" style="text-decoration:none">
+          <div style="float:left;width:45%;height:80%;margin-left:3%;margin-top:1.5%">
+            <img src="{% static "home/img/titi.jpg" %}" style="height: 100%; width:100%" />
+          </div>
+        </a>
+      </div>
+
+      <div style="background-color:#EAF0F4;height:70%;">
+        <div style="width:93%;height:100%;background-color:#EAF0F4;margin-left:3%;">
+            <img src="{% static "home/img/circulation.jpg" %}"style="height: 100%; width:100%" />
+        </div>
+      </div>
+
+      <div style="height:10%;background-color:white"></div>
+        <a href="{% url "home:team_introduce" %}" style="text-decoration:none">
+          <div style="height:50%;background-color:#EAF0F4;">
+            <img src="{% static "home/img/civil.jpeg" %}" style="height: 100%; width:100%" />
+          </div>
+        </a>
+
+      <div style="height:10%;background-color:white;">
+      </div>
+      
+      <div class="footer" style="height:20%;background-color:rgba(35,52,68,0.89);">
+          <p>Copyright &copy; OneDayHof   서비스소개  이용약관   개인정보취급방침   고객센터</p>
+          <p>사업자등록번호 : 000-0000-0000 통신판매업신고번호 : 2016-555-5555 주소 : 서울대학교 관정관 파리바게트</p>
+      </div>
+
+    </div>
+
+  </body>
+</html>
+
+  {% endblock %}

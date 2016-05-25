@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Articles</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+</head>
+<body>
+{% include 'product/product.ajax.html' %}
+</body>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+    function checkScrollPosition() {
+    if ($('.gallery').height() <= $(window).scrollTop() + $(window).height()) {
+         event.preventDefault();
+$.ajax({
+  url: $('#get-next-products').attr('href'),
+    });
+    }}
+        $(window).scroll(checkScrollPosition);
+}
+  //  $('body').on('click', '#get-next-products', function(event){
+   //     event.preventDefault();
+    //    $.ajax({
+     //       url: $('#get-next-products').attr('href'),
+      //      success: function(data){
+       //         prev = $('#get-next-products').prev();
+        //        $('#get-next-products').remove();
+         //       prev.after(data);
+          //  }
+     //   });
+  //  });
+
+</script>
+</html>

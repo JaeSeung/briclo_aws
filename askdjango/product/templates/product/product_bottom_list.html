@@ -1,0 +1,41 @@
+{% extends 'home/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+   <head>
+        <link rel="stylesheet" type="text/css" href="{% static "product/product_list.css" %}">
+    
+              <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.6";
+                fjs.parentNode.insertBefore(js, fjs);
+              }(document, 'script', 'facebook-jssdk'));</script>
+     </head>
+     <div class="main_container">
+       <div class="gallery">
+          <p1 style="margin-left:39%;font-size:3em">CONTENTS</p1>
+         <div class = "product_list_left_container">
+           <div class='row'>
+           {% for product in product_list %}
+                        <a href="{% url "product:product_bottom_detail" product.pk%}">
+                          <img class="product_main_image" src="{{ product.main_photo.url}}"/>
+                        </a>
+           {% endfor %}
+            </div>
+          </div>
+          <div class="product_list_right_container">
+          <div class="fb-comments" data-href="https://www.briclo.com/product" data-width="100%" data-numposts="10">
+             
+          </div>
+            <div id="fb-root">
+              }
+         </div>
+            
+       </div>  
+    </div>
+  </div>
+  </body>
+</html>
+{% endblock %}

@@ -1,0 +1,104 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+   <meta charset="UTF-8">
+    <title>BRICLO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+ <link rel="stylesheet" type="text/css" href="{% static "home/base.css" %}">
+</head>
+<style type="text/css">
+  .modal-header {
+    background-color: #426399;
+        align-content: center;
+
+ }
+  .modal-header h4 {
+    color:white;
+    font-size: 160%;
+    margin-left:43%;
+  }
+  .form-group  {
+    height:50%;
+  }
+  #nav_li_div li{
+      font-size:100%;
+  }
+</style>
+<body>
+  <div class="bar">
+    <div style="width:30%;height:80%;top:10%;left:0%;">
+     <a href="{% url "home.views.intro" %}">
+        <img  src="{% static "home/img/logo.png" %}" width=80% height=80% style=" margin-left:20%; margin-top:2%">
+     </a>
+    </div>
+
+    <div id="nav_li_div"style="font-size:130%; width:70%;top:20%">
+
+      <a href="{% url "product:product_list" %}">
+        <li style=" margin-left:5em;margin-right:2em; margin-top:1.4%">
+          코디
+        </li>
+      </a>
+
+      <a href="{% url "product:product_top_list" %}">
+        <li style="margin-right:2em; margin-top:1.4%">
+          상의
+        </li>
+      </a>
+
+      <a href="{% url "product:product_bottom_list" %}" >
+        <li style="margin-right:2em; margin-top:1.4%">
+          하의
+        </li>
+      </a>
+
+      <a href="{% url "product:product_bottom_list" %}" >
+        <li style="margin-right:6em; margin-top:1.4%">
+          SELL
+        </li>
+      </a>
+            {% comment %}
+                <li style="margin-right:0.3em; margin-top:1.4%">
+                <a href="{% url "logout" %}?next={{request.path}}">
+                logout
+                </a>
+                </li>
+            {% endcomment %}
+
+                {% if user.is_authenticated %}
+                <li style="margin-right:3em; margin-top:1.4%"><a href="{% url 'logout' %}">logout</a></li>
+                {% else %}
+
+                <li  style="margin-right:0.3em; margin-top:1.4%"><a  href="#" id="loginBtn" data-toggle="modal" data-target="#loginModal" >Login</a></li>
+                <li style="margin-right:0.3em; margin-top:1.4%">/</li>
+                <li style="margin-right:3em; margin-top:1.4%"><a href="{% url 'signup' %}">Register</a></li>
+                {% endif %}
+
+
+      <a href="{% url "home:team_introduce" %}">
+        <li style="margin-right:2em; margin-top:1.4%; ">브리클로 소개</li>
+      </a>
+       <div style="margin-top:50%; float:left; width:20%; margin-top:1%;padding-right:1%">
+       
+        {% if user.is_authenticated %}
+            
+         <li style="margin-right:2em; margin-top:1.4%; color:blue"><a href="{% url "profile" %}">{{user.username}}님</a></li>
+        
+        {% else %}
+        {% endif %}
+        <span style="float:left; width:25%;margin-top:1.7%">
+         <li style="margin-right:2em; margin-top:1.4%">HELP</li>
+        </span>
+        </div>
+
+    </div>
+  </div>
+
+  {% include 'home/loginModal.html' %}
+  {% block content %}
+  {% endblock %}

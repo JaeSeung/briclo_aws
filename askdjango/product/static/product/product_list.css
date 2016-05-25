@@ -1,0 +1,41 @@
+    .product_list_left_container{
+      float:left;
+      width:80%;
+    }
+    .product_list_right_container{
+      float:left;
+      width:20%;
+    }
+    .product {
+      margin : 1%;
+      margin-bottom:2%;
+    }
+    .gallery {
+      z-index:1;
+      width:80%;
+      position:relative;
+      clear:both;
+      top:15%;
+      margin-top:7%;
+      margin-left:10%;
+    }
+    .row{
+      position:relative;
+      left:3%;
+      height:55%;
+      width:100%%;
+      clear:both;
+      margin-top:3%;
+
+    }
+    .row div{
+      width:25%;
+      height:100%;
+      border:1px solid black;
+      float:left;
+      margin:3%;
+    }
+    .product_main_image{
+    height : 100%;
+    width : 100%;
+     }

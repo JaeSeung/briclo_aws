@@ -1,0 +1,229 @@
+{% extends 'home/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+    <title>BRICLO</title>
+    <script src="jquery-1.12.2.min.js"></script>
+    <style>
+         .bar {
+         	z-index:3;
+          margin-left:3%;
+          width:94%;
+          height:10%;
+          position:fixed;
+          top:0;
+          background-color:rgba(255,255,255,0);
+          clear:both;
+        }
+        .bar div{
+          float:left;
+          position:relative;
+        }
+        .bar div li{
+          float:left;
+          font-size:1em;
+          list-style-type:none;
+        }
+        
+        .container {
+        	z-index:2;
+          width:92%;
+          margin-left:4%;
+          height:100%;
+          position:absolute;
+          top:10%;
+          clear:both;
+        }
+        .subject {
+          width:98%;
+          position:relative;
+          height:7%;
+          clear:both;
+          font-family:"서울남산장체";
+        }
+        .subject hr {
+          width:100%;
+        }
+        .container_1 {
+          position:relative;
+          top:8.5%;
+          height:72%;
+          width:100%;
+          clear:both;
+        }
+        .leftside {
+          width:49%;
+          height:100%;
+          float:left;
+          border:1px solid black;
+        }
+        .pic1{
+          margin-top:5%;
+          margin-left:20%;
+          height:60%;
+          width:60%;
+          border:1px black solid;
+        }
+        .pic2{
+          margin-top:5%;
+          margin-left:5%;
+          clear:both;
+          height:20%;
+          width:90%;
+        }
+        .pic2 div{
+          border:1px black solid;
+          float:left;
+          margin-left:3.5%;
+          height:99%;
+          width:20%;
+        }
+        .rightside {
+          width:49%;
+          height:100%;
+          float:left;
+          border:1px solid black;
+        }
+        .rightside_1 span{
+          position:relative;
+          margin-left:5%;
+          height:30%;
+        }
+        .rightside_1 button {
+          border-radius:1em;
+          height:3em;
+          width:15em;
+        }
+        .rightside_2 {
+          background-color:#EAECF9;
+          position:absolute;
+          bottom:0;
+          height:65%;
+          width:49%;
+        }
+        .rightside_2 span {
+          margin-left:13%;
+        }
+        .container_2 {
+          z-index:1;
+          position:relative;
+          top:5%;
+          height:70%;
+          width:100%;
+          clear:both;
+          margin-top:3%;
+          background-color:rgba(234,246,249,0.7);
+        }
+        .container_2_bar{
+          z-index:2;
+          height:12%;
+          width :100%;
+          clear:both;
+          border-radius:23px;
+          background-color:#005376;
+        }
+        .container_2_bar div {
+          float:left;
+          height:90%;
+          top:5%;
+          width:12%;
+          background-color:rgba(247,247,249,0.2);
+          position:relative;
+          text-align:center;
+        }
+        .container_2_bar span {
+          color:white;
+          font-size:0.9em;
+          line-height:3em;
+        }
+        .container_2_bottom ul {
+          margin-left:25%;
+          list-style-type:none;
+        }
+        .container_2_bottom ul li {
+          margin-top:3%;
+        }
+        .container {
+        	margin-top :10%;
+        }
+      </style>
+  </head>
+
+  <body>
+    </div>
+    <div class="container">
+      <div class="subject">
+        <span style="font-size:1.5em">그림<img src=""/> 코디</span>
+        <hr>
+        <span>코디 화살표<img src=""/> (품명)</span>
+        <hr>
+      </div>
+
+      <div class="container_1">
+        <div class="leftside">
+          <div class="pic1"><img src=""/></div>
+          <div class="pic2">
+            <div><img src=""/></div>
+            <div><img src=""/></div>
+            <div><img src=""/></div>
+            <div><img src=""/></div>
+          </div>
+        </div>
+        
+        <div class="rightside">
+          <div class="rightside_1"><br>
+            <span style="font-size:1.5em">(품명)</span><br>
+            <span style="font-size:1em;color:grey;margin-left:7%">Retail:  \(가격)</span>
+            arrow
+            <span style="font-size:1.3em;"><strong>LT Price : \(가격)</strong></span><br><br>
+            <span>
+              <button onclick="location.href = 'http://www.naver.com';" style="background-color:white;border-color:#EAECF9;border-width:2px;border-style:solid;">
+                <span style="position:absolute;font-size:1.2em;left:0%;bottom:110%">장바구니 담기</span>
+                <img src="https://jandi-box.com/files-thumb/11998765/07d15a1fe6a84d20e852592c51808934.png?size=640" style="height:90%;width:auto;position:absolute;left:32%;bottom:50%"/>
+              </button>
+              <button onclick="location.href = 'http://www.naver.com';" style="margin-left:5%;background-color:#EAECF9;border:none">
+                <span style="position:absolute;font-size:1.2em;left:62%;bottom:110%;color:white">빌리기</span>
+                <img src="https://jandi-box.com/files-thumb/11998765/07d15a1fe6a84d20e852592c51808934.png?size=640" style="height:90%;width:auto;position:absolute;left:85%;bottom:50%"/>
+              </button>
+            </span><br>
+          </div>
+
+          <div class="rightside_2">
+            <span style="font-size:1.3em">코디 상품</span><br><br>
+            <span style="font-size:1.2em;color:grey">arrow  상의</span><br><br>
+            <span style="color:grey;margin-left:18%">(상의 상품명)</span><span style="color:grey">(상의 가격)</span>체크 박스<br><br>
+            <span>arrow  하의</span><br><br>
+            <span style="color:grey;margin-left:18%">(하의 상품명)</span><span style="color:grey">(하의 가격)</span>체크 박스
+          </div>
+        </div>
+      </div>
+    
+      <div class="container_2"> 
+
+        <div class="container_2_bar">
+          <div style="margin-left:23%"><span>사진보기</span></div>
+          <div style="margin-left:2%"><span>상세정보</span></div>
+          <div style="margin-left:2%"><span>반품 및 환불안내</span></div>
+          <div style="margin-left:2%"><span>배송정보</span></div>
+        </div>
+
+
+        <div class="container_2_bottom">
+          <ul style="list-style-image:url("") ;>
+            <li>arrow <strong>상품코드 :</strong><span style="color:grey";> (상품코드)</span></li>
+            <li>arrow <strong>소재 :</strong><span style="color:grey";> (소재)</span></li>
+            <li>arrow <strong>세탁방법 :</strong><span style="color:grey";> (물세탁)</span></li>
+            <li style="color:grey";>arrow 모니터 사양에 따라 실제 색상과 다소 차이가 있을 수 있습니다.</li>
+            <li style="color:grey";>arrow 브리클로의 모든 상품은 정품입니다.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+<!--footer 들어갈 자리 -->
+  </body>
+</html>
+{% endblock %}

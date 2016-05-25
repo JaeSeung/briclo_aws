@@ -1,0 +1,14 @@
+
+      .container {
+        z-index:1;
+        width:99%;
+        height:100%;
+        position:absolute;
+        top:15%;
+      }
+      .container div{
+        width:100%;
+      }
+      .container div div{
+        border:black 1px solid;
+      }

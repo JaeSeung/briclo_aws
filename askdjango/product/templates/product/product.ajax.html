@@ -1,0 +1,9 @@
+<div class = "gallery" style="clear:both">
+{% for products in products %}
+    <div style="width:60%; height:30%; ">
+       <img style ="width :100%; height :100% " src={{ products.main_photo.url }} />
+    </div>
+{% endfor %}
+
+</div >
+<button style="width:50%; height:100px" id="get-next-products" href="{% url 'next-products' next_pk=next_pk %}">더 보기</button>

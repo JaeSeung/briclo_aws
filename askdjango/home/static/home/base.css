@@ -1,0 +1,25 @@
+.bar {
+        z-index:2;
+        width:99%;
+        height:10%;
+        position:fixed;
+        top:0;
+        background-color:rgba(255,255,255,0.7);
+      }
+      .bar div{
+        float:left;
+        position:relative;
+      }
+      .bar div li{
+        margin-top:0.3%;
+        float:left;
+        font-size:1em;
+        list-style-type:none;
+      }
+{color:black;}
+a:visited
+{color:black;}
+a:hover
+{color: #233488;}
+a:active
+{color: red;}

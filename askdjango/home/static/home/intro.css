@@ -1,0 +1,33 @@
+.bar {
+        z-index:2;
+        width:99%;
+        height:10%;
+        position:fixed;
+        top:0;
+        background-color:rgba(255,255,255,0.7);
+      }
+      .bar div{
+        float:left;
+        position:relative;
+      }
+      .bar div li{
+        float:left;
+        font-size:1em;
+        list-style-type:none;
+      }
+      .container {
+        z-index:1;
+        width:99%;
+        height:100%;
+        position:absolute;
+        top:15%;
+      }
+      .container div{
+        width:100%;
+      }
+      .container div div{
+        border:black 1px solid;
+      }
+      .footer p {
+        color:white;
+      }

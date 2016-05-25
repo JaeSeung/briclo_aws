@@ -1,0 +1,30 @@
+{% extends "home/base.html" %}
+{% load staticfiles %}
+{% load bootstrap3 %}
+
+
+{% block content %}
+<style type="text/css">
+        #briclo{
+            margin-left:35%;
+            font-size : 180%;
+        }
+        .container{
+            margin-top:10%;
+        }
+</style>
+<div class="container">
+    <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+        <p id="briclo" class="lead text-align-center" ><strong>BRICLO</strong></p>
+        <form method="post" action="">{% csrf_token %}
+            {% bootstrap_form form %}
+
+            {% buttons %}
+                <button type="submit" class="btn btn-primary pull-right">{% bootstrap_icon "ok-sign" %} 회원가입 </button>
+            {% endbuttons %}
+        </form>
+    </div>
+    </div>
+</div>
+{% endblock %}
